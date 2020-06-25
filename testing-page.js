@@ -163,3 +163,65 @@ const metric = 'plumpness'
 judgeVegetable(vegetables, metric)
 
 
+////////////////////////////////////////////////////////////////
+///////// concatinating an array taken from an html object(array)
+///////// using class name can change to either id or tagname 
+
+
+///html example///
+
+{/* <h2>
+  List of People:
+</h2>
+
+<ul class='people'>
+  <li class='name'>
+    Clara
+  </li>
+  <li class='name'>
+    James
+  </li>
+  <li class='name'>
+    Sara
+  </li>
+</ul> */}
+
+/////////////////
+
+let elm = [];
+let names = [];
+elm = document.getElementsByClassName("name");
+
+for (let i = 0; i < elm.length; i++){
+  names.push(" " + elm[i].innerText);
+}
+
+
+alert(names);
+
+
+/////////////////////////////////////////////////////////////////
+////////////// setting width change intervals using setTimeout
+
+
+let timeOut = document.getElementById('lhl-logo'); 
+timeOut.width = "200"
+
+ const timerReSize = function (number) {
+  timeOut.width = number;
+}
+
+
+setTimeout(timerReSize, 20000, '400');
+
+
+////////////////////////////////////////////////////////////
+////// changing inner html
+
+const elm = document.getElementById('info');
+elm.innerHTML = 'Javascript Rock!';
+
+//////////////////////////////////////////////////////////
+///////////  setting an attribute that doesnt exist yet.
+
+document.getElementById('name').setAttribute('placeholder', 'I am actually a place setting HAHAHAHA');
