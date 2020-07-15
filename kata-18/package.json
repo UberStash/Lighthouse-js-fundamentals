@@ -11,5 +11,8 @@
     "url": "UberStash"
   },
   "author": "Colin McLellan",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync-history": "^1.0.1"
+  }
 }
